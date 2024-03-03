@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NavigationItem = ({ children }) => (
   <div className="navigation-item">{children}</div>
@@ -26,7 +27,13 @@ const Header = () => {
         }}>Farmers Konnect</div>
       </div>
       <Navbar />
-      <button className="get-started">Get Started</button>
+      
+
+      
+
+      <button className="get-started">
+        <Link to="/login">Get Started</Link>
+      </button>
     </header>
   );
 };

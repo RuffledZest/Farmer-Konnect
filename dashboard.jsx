@@ -1,8 +1,8 @@
 import GalleryComponent from "./src/components/community0";
 import CropManager from "./src/components/homeDashboard";
 
-function FinalDashboard(){
-    return(
+function FinalDashboard() {
+    return (
         <>
             <div style={{
                 display: 'flex',
@@ -12,8 +12,8 @@ function FinalDashboard(){
                 justifyContent: 'space-evenly',
             }}>
 
-            <GalleryComponent />
-            <CropManager />
+                <GalleryComponent/>
+                <CropManager />
 
 
 

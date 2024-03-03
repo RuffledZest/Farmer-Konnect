@@ -1,11 +1,11 @@
 import React from "react";
-
+import { Link } from 'react-router-dom';
 const SellerCard = ({ imageUrl, altText, labelText, buttonText }) => (
   <article className="seller-card">
     <img loading="lazy" src={imageUrl} alt={altText} className="seller-image" />
     <div className="seller-info">
       <h3 className="seller-label">{labelText}</h3>
-      <div className="button">{buttonText}</div>
+      <div className="button" ><Link to="/dashboard">{buttonText}</Link></div>
     </div>
   </article>
 );
@@ -24,8 +24,9 @@ const SellerSection = () => (
         altText="Product 2"
         labelText="Seller"
         buttonText="Lets’s Go"
-      />
+      ></SellerCard>
     </section>
+    
     <style jsx>{`
       .seller-section {
         display: flex;

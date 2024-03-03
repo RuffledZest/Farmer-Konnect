@@ -5,7 +5,7 @@ const StyledBox1 = () => (
     <style jsx>{`
       .styled-box1 {
         border-radius: 20px;
-        background-color: blue;
+        background-color: green;
         align-self: start;
         width: 296px;
         height: 109px;
@@ -33,7 +33,7 @@ const StyledBox3 = () => (
     <style jsx>{`
       .styled-box3 {
         border-radius: 20px;
-        background-color: blue;
+        background-color: green;
         align-self: start;
         width: 296px;
         

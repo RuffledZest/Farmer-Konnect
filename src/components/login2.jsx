@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ImageWithTitle = ({ imageUrl, alt, title }) => (
   <div className="image-with-title" style={{
@@ -49,12 +50,12 @@ const RegistrationForm = () => {
       {formItems.map((item) => (
         <TextField key={item.name} label={item.label} name={item.name} type={item.type} />
       ))}
-      <button type="submit" className="register-button" style={{
+      <button   className="register-button" style={{
         width: '40vh',
         borderRadius: '20px',
         hover: 'pointer',
         
-      }}>Register</button>
+      }}><Link to="/roles">Register</Link></button>
     </form>
   );
 };
