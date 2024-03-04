@@ -20,43 +20,57 @@ const CropManager = (props) => {
 
   return (
     <>
-      <header>
-        <div className="header-box">
-          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/38ea5c2c96f29f55234984f95621912a436f1f6117c59471d162ceee47f67a98?apiKey=dadde3c8bb91485ea6a1326748697be7&" className="header-image" alt="Header" />
-        </div>
-      </header>
-      <main>
-        <section className="crop-overview-section">
-          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/32f110d7cdc3a8627e696838eb3b43abee3b065323c4e402904ab459d5997293?apiKey=dadde3c8bb91485ea6a1326748697be7&" className="crop-overview-image" alt="Crop Overview" />
-          <h1>Crop Overview</h1>
-        </section>
-        <section className="temperature-section">
-          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d9b54eebcb74814d4157dd0475caf6d67aa8611d14b8f59c1e27f706ac591847?apiKey=dadde3c8bb91485ea6a1326748697be7&" className="temperature-image" alt="Temperature Ranges" />
-          <div className="temperature-readings">
-            <div className="temperature-high">35 C</div>
-            <div className="temperature-low">15 C</div>
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+      }}>
+
+        <header>
+          <div className="header-box">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/38ea5c2c96f29f55234984f95621912a436f1f6117c59471d162ceee47f67a98?apiKey=dadde3c8bb91485ea6a1326748697be7&" className="header-image" alt="Header" />
           </div>
-        </section>
-        <article className="crop-information-article">
-          <header>
-            <h2>Name of the crop</h2>
-            <h2>Area</h2>
-            <h2>Planting Date</h2>
-            <h2>Est. Harvest Date</h2>
-          </header>
-          {cropsData.map((crop, index) => (
-            <CropInformation key={index} {...crop} />
-          ))}
-        </article>
-      </main>
-      <aside className="insights-recommendations">
-        <div className="market-insights">
-          <h3>Market Insights</h3>
+        </header>
+        <div style={{
+          display: 'flex',
+          gap: '20px',
+          justifyContent: 'space-between',
+          
+        }}>
+          <main>
+            <section className="crop-overview-section">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/32f110d7cdc3a8627e696838eb3b43abee3b065323c4e402904ab459d5997293?apiKey=dadde3c8bb91485ea6a1326748697be7&" className="crop-overview-image" alt="Crop Overview" />
+              <h1>Crop Overview</h1>
+            </section>
+            <section className="temperature-section">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d9b54eebcb74814d4157dd0475caf6d67aa8611d14b8f59c1e27f706ac591847?apiKey=dadde3c8bb91485ea6a1326748697be7&" className="temperature-image" alt="Temperature Ranges" />
+              <div className="temperature-readings">
+                <div className="temperature-high">35 C</div>
+                <div className="temperature-low">15 C</div>
+              </div>
+            </section>
+            <article className="crop-information-article">
+              <header>
+                <h2>Name of the crop</h2>
+                <h2>Area</h2>
+                <h2>Planting Date</h2>
+                <h2>Est. Harvest Date</h2>
+              </header>
+              {cropsData.map((crop, index) => (
+                <CropInformation key={index} {...crop} />
+              ))}
+            </article>
+          </main>
+          <aside className="insights-recommendations">
+            <div className="market-insights">
+              <h3>Market Insights</h3>
+            </div>
+            <div className="recommendations">
+              <h3>Recommendations</h3>
+            </div>
+          </aside>
         </div>
-        <div className="recommendations">
-          <h3>Recommendations</h3>
-        </div>
-      </aside>
+
+      </div>
       <style jsx>{`
         .header-box {
           border-radius: 50px;
