@@ -31,8 +31,12 @@ const Header = () => {
 
       
 
-      <button className="get-started">
-        <Link to="/login">Get Started</Link>
+      <button className="get-started"
+      >
+        <Link to="/login"
+        style={{
+          color: 'white',
+        }}>Get Started</Link>
       </button>
     </header>
   );
@@ -49,7 +53,8 @@ function App1() {
             box-sizing: border-box;
         }
         header {
-          background-color: white;
+          background-color: black;
+          color: white;
           display: flex;
           width: 100%;
           justify-content: space-between;

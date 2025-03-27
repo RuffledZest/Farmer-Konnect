@@ -1,7 +1,7 @@
 import React from "react";
 
 const FeatureCard = ({ imageSrc, title, description, imageAlt }) => (
-    <div className="feature-card">
+    <div className="feature-card" >
         <div className="feature-media">
             <img loading="lazy" src={imageSrc} alt={imageAlt} className="feature-icon" />
         </div>
@@ -38,6 +38,14 @@ const FeaturesContainer = () => {
   return (
     <div style={{
         padding: '20px 50px',
+        display: 'flex',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+
+        
+
+          
+        
         
     }}>
         <section className="features-container" style={{
@@ -60,7 +68,8 @@ const FeaturesContainer = () => {
         }
         
         .feature-card {
-          background-color: #f0f9f4;
+          background-color:rgb(218, 218, 218);
+          
           border-radius: 20px;
           padding: 20px;
           color: #000;
@@ -80,6 +89,7 @@ const FeaturesContainer = () => {
         .feature-title {
             margin-top: 15px;
           font-weight: 500;
+          color: black;
           font-size: 20px;
           text-align: center;
         }

@@ -33,7 +33,9 @@ const FarmersKonnect = () => {
 
   return (
     <>
-      <section className="farmers-konnect">
+      <section className="farmers-konnect" style={{
+        backgroundColor: 'black',
+      }}>
         <div className="konnect-intro">
           <h2>Farmers about Farmers Konnect</h2>
           <p>Feel the happiness of India’s Farmer</p>
